@@ -10,8 +10,8 @@
     <script src="https://kit.fontawesome.com/0ef9526f11.js" crossorigin="anonymous"></script>
     <title>WallChatters</title>
 </head>
-<body>
-    <header>
+<body class="min-vh-100 d-flex flex-column">
+    <header class="mb-5">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">wallChatters</a>
@@ -38,10 +38,31 @@
             </div>
           </nav>
     </header>
-    <main>
+    <main class="d-flex justify-content-center mt-5 container">
+      <div class="loginForm">
+        <form class="mb-3" action="/profile.html">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll consider sharing your personal info.</div>
+          </div>
+          <div class="mb-1">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </main>
-    <footer>
-
+    <footer class="footerPlacement d-flex justify-content-center p-2 mt-auto bg-light">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a> 
+      <a href="login.html">Login/Create Account</a>
     </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
