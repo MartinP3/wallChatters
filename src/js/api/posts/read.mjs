@@ -8,7 +8,6 @@ export async function getPosts() {
     const getPostsURL = `${API_SOCIAL_URL}${action}`;
 
     const response = await authFetch(getPostsURL)
-
     return await response.json();
 }
 

@@ -16,8 +16,12 @@ export async function register(profile) {
     })
 
     const result = await response.json();
-
-    alert("You are now registered!");
+    console.log(result);
+    if (result.error) {
+        alert("This account already exists");
+    } else {
+        alert("You are now registered");
+    }
     
     return result;
 }

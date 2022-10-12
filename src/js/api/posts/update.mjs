@@ -6,12 +6,15 @@ const method = "put";
 
 export async function updatePost(postData) {
     if (!postData.id) {
-        throw new Error("Ayo bro we need a  postID to get some work done here!");
+        throw new Error("An edit/update requires a PostID");
+    }
+    if (postData.media === "") {
+        delete postData.media;
     }
 
-    const updatePostsURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
+    const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
-    const response = await authFetch(updatePostsURL, {
+    const response = await authFetch(updatePostURL, {
         method,
         body: JSON.stringify(postData)
     })

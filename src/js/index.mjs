@@ -1,17 +1,21 @@
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
-import * as post from "./api/posts/index.mjs";
+import router from "./router.mjs";
+import * as postMethods from "./api/posts/index.mjs";
+import * as templates from "./templates/index.mjs";
 
-const path = location.pathname;
+router();
 
-if (path === "/profile/register/") {
-    setRegisterFormListener();
-} else if (path === "/profile/login/") {
-    setLoginFormListener();
+// Adds the 100 latest posts to /posts
+async function addPosts() {
+    const posts = await postMethods.getPosts();
+    const container = document.querySelector("#multiplePosts");
+    templates.renderPostTemplates(posts, container);
 }
+addPosts();
 
-// post.createPost();
-post.getPost(3560).then(console.log);
-// post.getPosts().then(console.log);
-// post.updatePost();
-// post.removePost();
+// Builds a single post on it's respective page
+async function addPost() {
+    const post = await postMethods.getPost();
+    const container = document.querySelector("singlePost");
+    templates.renderPostTemplate(post, container);
+}
+addPost();
