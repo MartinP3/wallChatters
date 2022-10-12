@@ -5,17 +5,21 @@ import * as templates from "./templates/index.mjs";
 router();
 
 // Adds the 100 latest posts to /posts
-async function addPosts() {
-    const posts = await postMethods.getPosts();
-    const container = document.querySelector("#multiplePosts");
-    templates.renderPostTemplates(posts, container);
+if (location.pathname === "/posts/") {
+    async function addPosts() {
+        const posts = await postMethods.getPosts();
+        const container = document.querySelector("#multiplePosts");
+        templates.renderPostTemplates(posts, container);
+    }
+    addPosts();
 }
-addPosts();
 
 // Builds a single post on it's respective page
-async function addPost() {
-    const post = await postMethods.getPost();
-    const container = document.querySelector("singlePost");
-    templates.renderPostTemplate(post, container);
+if (location.pathname === "/post/") {
+    async function addPost() {
+        const post = await postMethods.getPost();
+        const container = document.querySelector("#singlePost");
+        templates.renderPostTemplate(post, container);
+    }
+    addPost();
 }
-addPost();

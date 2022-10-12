@@ -19,5 +19,5 @@ export default function router() {
         case "/post/edit/":
             listeners.setUpdatePostListener()
             break;
-    }
+    }   
 }

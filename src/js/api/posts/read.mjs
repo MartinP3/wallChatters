@@ -11,12 +11,14 @@ export async function getPosts() {
     return await response.json();
 }
 
-export async function getPost(id) {
-    if (!id) {
+export async function getPost(thisID) {
+    const url = new URL(location.href);
+    thisID = url.searchParams.get("id");
+    if (!thisID) {
         throw new Error("Get requires a postID");
     }
 
-    const getPostURL = `${API_SOCIAL_URL}${action}/${id}`;
+    const getPostURL = `${API_SOCIAL_URL}${action}/${thisID}`;
 
     const response = await authFetch(getPostURL)
 
