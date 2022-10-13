@@ -22,7 +22,6 @@ export async function handleSearchPostsInput(event) {
         container.innerHTML = "";
 
         const inputValue = event.currentTarget.value.toLowerCase();
-        console.log(inputValue);
 
         const result = postsJSON.filter((searchResult) => {
             if (searchResult.title.toLowerCase().startsWith(inputValue)
@@ -30,7 +29,7 @@ export async function handleSearchPostsInput(event) {
                 return true;
             }
         })
-        console.log(result)
+        
         renderPostTemplates(result, container);
     }
     catch (error) {
