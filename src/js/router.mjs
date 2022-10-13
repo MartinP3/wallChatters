@@ -19,5 +19,11 @@ export default function router() {
         case "/post/edit/":
             listeners.setUpdatePostListener()
             break;
+        case "/posts/":
+            listeners.addPosts();
+            break;
+        case "/post/":
+            listeners.addPost();
+            break;
     }   
 }
