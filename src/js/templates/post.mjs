@@ -34,10 +34,12 @@ export function postTemplateA(postData) {
     cardBodySmallText.innerText = `Last updated: ${postData.updated}`;
     cardBodyLastUpdated.append(cardBodySmallText);
 
-    const cardBodyTags = document.createElement("div");
-    cardBodyTags.classList.add("card-text", "mb-1");
-    cardBodyTags.innerHTML = `Tags: ${postData.tags}`;
-    cardBody.append(cardBodyTags);
+    if (!postData.tags === "") {
+        const cardBodyTags = document.createElement("div");
+        cardBodyTags.classList.add("card-text", "mb-1");
+        cardBodyTags.innerHTML = `Tags: ${postData.tags}`;
+        cardBody.append(cardBodyTags);
+    }
 
     const cardBodyAuthor = document.createElement("p");
     cardBodyAuthor.classList.add("card-text");
