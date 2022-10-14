@@ -48,8 +48,13 @@ export function postTemplateA(postData) {
 
     const cardBodyEdit = document.createElement("div");
     cardBodyEdit.classList.add("card-text");
-    cardBodyEdit.innerHTML = `<a href="/post/edit/?id=${postData.id}">Edit post</a> Don't click if you're not the author >:(`
+    cardBodyEdit.innerHTML = `<a href="/post/edit/?id=${postData.id}" class="btn btn-primary btn-large mb-2">Edit post</a>`;
     cardBody.append(cardBodyEdit);
+
+    const cardBodyDelete = document.createElement("div");
+    cardBodyDelete.classList.add("card-text");
+    cardBodyDelete.innerHTML = `<a href="/post/remove/?id=${postData.id}" class="btn btn-danger btn-large">Delete post</a>`;
+    cardBody.append(cardBodyDelete);
     return post;
 }
 /////////////////
@@ -83,7 +88,7 @@ export function postTemplateB(postData) {
 
     const cardBodyViewPost = document.createElement("p");
     cardBodyViewPost.classList.add("card-text");
-    cardBodyViewPost.innerHTML = `<a href="/post/?id=${postData.id}">View post #${postData.id}</a>`
+    cardBodyViewPost.innerHTML = `<a href="/post/?id=${postData.id}" target="_blank">View post #${postData.id}</a>`
     cardBody.append(cardBodyViewPost);
 
     const cardBodyLastUpdated = document.createElement("p");

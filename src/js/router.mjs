@@ -16,14 +16,17 @@ export default function router() {
         case "/profile/":
             listeners.addProfile()
             break;
+        case "/posts/":
+            listeners.addPosts();
+            break;
         case "/post/create/":
             listeners.setCreatePostListener()
             break;
         case "/post/edit/":
             listeners.setUpdatePostListener()
             break;
-        case "/posts/":
-            listeners.addPosts();
+        case "/post/remove/":
+            listeners.setDeletePostListener()
             break;
         case "/post/":
             listeners.addPost();
