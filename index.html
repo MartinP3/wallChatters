@@ -7,7 +7,7 @@
 </head>
 <body class=" min-vh-100 flex-column d-flex">
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">wallChatters</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,30 +37,27 @@
                 Posts
               </a>
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarNavDarkDropdown">
-                  <li><a class="dropdown-item" href="/post/create/">Create Post</a></li>
-                  <li><a class="dropdown-item" href="/posts/">Posts</a></li>
+                <li><a class="dropdown-item" href="/posts/">Posts</a></li>
+                <li><a class="dropdown-item" href="/post/create/">Create Post</a></li>
               </ul>
             </li>
           </ul>
       </div>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </nav>
 </header>
 <main class="flex-grow-1 bg-dark text-light">
-    <div class="d-grid gap-2 d-md-block">
-        <h1>wallChatters</h1>
-        <a href="/profile/login/" class="btn btn-success btn-lg" role="button">Log in</a>
-        <a href="/profile//register/" class="btn btn-success btn-lg" role="button">Register</a>
+  <div class="d-flex justify-content-center mt-5">
+    <div class="d-grid gap-2 d-xl-block">
+      <h1>wallChatters</h1>
+      <a href="/profile/login/" class="btn btn-success btn-lg" role="button">Log in</a>
+      <a href="/profile//register/" class="btn btn-success btn-lg" role="button">Register</a>
     </div>
+  </div>
 </main>
-<footer class="footerPlacement d-flex justify-content-center p-2 mt-auto bg-light">
-  <a href="index.html">Home</a>
-  <a href="profile.html">Profile</a> 
-  <a href="login.html">Login/Create Account</a>
+<footer class="footerPlacement d-flex justify-content-center p-2 bg-dark">
+  <a href="/">Home</a>
+  <a href="/profile/">Profile</a> 
 </footer>
 </body>
 </html>
