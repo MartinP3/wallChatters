@@ -7,7 +7,7 @@ const { name } = load("profile");
 
 // Loads profile
 export async function addProfile() {
-    const profile = await postMethods.getProfile(name);
-    const container = document.querySelector("#profile");
-    templates.renderProfileTemplate(profile, container);
+  const profile = await postMethods.getProfile(name);
+  const container = document.querySelector("#profile");
+  templates.renderProfileTemplate(profile, container);
 }
