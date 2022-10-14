@@ -1,6 +1,5 @@
 import { API_SOCIAL_URL } from "../constants.js";
 import { authFetch } from "../authFetch.mjs";
-import { load } from "../../storage/index.mjs";
 
 const action = "/profiles";
 

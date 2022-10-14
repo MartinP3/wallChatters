@@ -43,7 +43,7 @@ export function postTemplateA(postData) {
 
     const cardBodyAuthor = document.createElement("p");
     cardBodyAuthor.classList.add("card-text");
-    cardBodyAuthor.innerHTML = `By: ${postData.author}`;
+    cardBodyAuthor.innerHTML = `By: ${postData.author.name}`;
     cardBody.append(cardBodyAuthor);
 
     const cardBodyEdit = document.createElement("div");

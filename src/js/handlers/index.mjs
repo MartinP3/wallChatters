@@ -5,3 +5,4 @@ export * from "./updatePost.mjs";
 export * from "./updateProfile.mjs";
 export * from "./searchPost.mjs";
 export * from "./posts.mjs";
+export * from "./loadProfile.mjs";
