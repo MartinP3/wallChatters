@@ -5,16 +5,16 @@ const action = "/posts";
 const method = "post";
 
 export async function createPost(postData) {
-  const createPostsURL = API_SOCIAL_URL + action;
+    const createPostsURL = API_SOCIAL_URL + action;
 
-  if (postData.media === "") {
-    delete postData.media;
-  }
+    if (postData.media === "") {
+        delete postData.media;
+    }
 
-  const response = await authFetch(createPostsURL, {
-    method,
-    body: JSON.stringify(postData),
-  });
+    const response = await authFetch(createPostsURL, {
+        method,
+        body: JSON.stringify(postData)
+    })
 
-  return await response.json();
+    return await response.json();
 }
