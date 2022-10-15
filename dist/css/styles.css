@@ -10929,6 +10929,10 @@ html, body {
   display: table;
 }
 
+img {
+  height: 400px;
+}
+
 .footerPlacement {
   bottom: 0;
   width: 100%;
@@ -10939,18 +10943,4 @@ html, body {
 .footerPlacement a {
   margin-right: 1rem;
   text-decoration: none;
-}
-
-.friendPicture {
-  height: 66px;
-  border-radius: 50%;
-}
-
-.textareaSize {
-  max-width: 450px;
-  max-height: 150px;
-}
-
-.loginForm {
-  max-width: 750px;
 }/*# sourceMappingURL=styles.css.map */

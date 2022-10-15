@@ -6,7 +6,7 @@ export function profileTemplate(postData) {
     // Checks for banner, if none then skipped
     if (postData.banner) {
         const img = document.createElement("img");
-        img.classList.add("card-img-top")
+        img.classList.add("card-img-top", "col-md-4")
         img.src = postData.banner;
         img.alt = `Banner picture`;
         profile.append(img);

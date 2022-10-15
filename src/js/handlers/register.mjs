@@ -1,8 +1,6 @@
 import { register } from "../api/auth/register.mjs";
 
 export function setRegisterFormListener()  {
-    // Clears your local storage when you go to register
-    localStorage.clear();
 
     const form = document.querySelector("#registerForm");
 
