@@ -16,7 +16,7 @@ $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
-$dark:          $gray-90;
+$dark:          $gray-900;
 
 html, body {
     height: 100%;
@@ -35,7 +35,6 @@ html, body {
 .footerPlacement a {
     margin-right: 1rem;
     text-decoration: none;
-    color: black;
 }
 
 .friendPicture {
