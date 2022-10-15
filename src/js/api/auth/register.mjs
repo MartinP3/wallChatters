@@ -19,15 +19,10 @@ export async function register(profile) {
     console.log(result);
     if (result.error) {
         alert("This account already exists");
-<<<<<<< HEAD
-    } else {
-        alert("You are now registered");
-=======
         location.href = "/profile/login";
     } else {
         alert("You are now registered");
         location.href = "/posts";
->>>>>>> js2-logout
     }
     
     return result;
