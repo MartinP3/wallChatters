@@ -1,6 +1,12 @@
 import { login } from "../api/auth/login.mjs";
 
 export function setLoginFormListener()  {
+<<<<<<< Updated upstream
+=======
+    // Clears local storage so you're "logged out"
+    localStorage.clear();
+
+>>>>>>> Stashed changes
     const form = document.querySelector("#loginForm");
 
     if (form) {

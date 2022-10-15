@@ -15,6 +15,9 @@ export async function updateProfile(profileData) {
         method,
         body: JSON.stringify(profileData)
     })
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     return await response.json();
 }
