@@ -4,6 +4,7 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/posts";
 const author = "?_author=true";
 
+// Gets all posts for the templates to fill out
 export async function getPosts() {
   const getPostsURL = `${API_SOCIAL_URL}${action}/${author}`;
 
@@ -12,6 +13,7 @@ export async function getPosts() {
   return await response.json();
 }
 
+// Gets a singular post for the template
 export async function getPost(thisID) {
   const url = new URL(location.href);
   thisID = url.searchParams.get("id");

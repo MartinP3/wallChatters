@@ -27,7 +27,7 @@ export default function router() {
       listeners.setUpdatePostListener();
       break;
     case "/post/remove/":
-      listeners.setDeletePostListener;
+      listeners.setDeletePostListener();
       break;
     case "/post/":
       listeners.addPost();

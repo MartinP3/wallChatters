@@ -115,6 +115,12 @@ export function postTemplateB(postData) {
   cardBodyViewPost.innerHTML = `<a href="/post/?id=${postData.id}" target="_blank">View post #${postData.id}</a>`;
   cardBody.append(cardBodyViewPost);
 
+  // Lists the author
+  const cardBodyAuthor = document.createElement("p");
+  cardBodyAuthor.classList.add("card-text");
+  cardBodyAuthor.innerHTML = `By: ${postData.author.name}`;
+  cardBody.append(cardBodyAuthor);
+
   // Paragraph for the next part 
   const cardBodyLastUpdated = document.createElement("p");
   cardBodyLastUpdated.classList.add("card-text");
@@ -123,7 +129,7 @@ export function postTemplateB(postData) {
   // Adds last updated text with a <small> modifier
   const cardBodySmallText = document.createElement("small");
   cardBodySmallText.classList.add("text-muted");
-  cardBodySmallText.innerText = `Last updated:${formattedDate} ${formattedTime}`;
+  cardBodySmallText.innerText = `Last updated: ${formattedDate} ${formattedTime}`;
   cardBodyLastUpdated.append(cardBodySmallText);
   return post;
 }
