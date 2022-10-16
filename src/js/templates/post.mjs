@@ -1,5 +1,10 @@
 // Single Post
 export function postTemplateA(postData) {
+
+  // Checks the local time on the API then makes it more legible on the user end
+  const formattedDate = new Date(postData.updated).toLocaleDateString('en-us', {month:"short", day:"numeric"});
+  const formattedTime = new Date(postData.updated).toLocaleTimeString('en-GB');
+
   const post = document.createElement("div");
   post.classList.add("post", "card", "mb-3", "text-bg-dark");
 
@@ -35,7 +40,7 @@ export function postTemplateA(postData) {
   // Last update of the post
   const cardBodySmallText = document.createElement("small");
   cardBodySmallText.classList.add("text-muted");
-  cardBodySmallText.innerText = `Last updated: ${postData.updated}`;
+  cardBodySmallText.innerText = `Last updated: ${formattedDate} ${formattedTime}`;
   cardBodyLastUpdated.append(cardBodySmallText);
 
   // Checks if tags are attached, if not, skip
@@ -67,8 +72,15 @@ export function postTemplateA(postData) {
 }
 /////////////////
 
+/////////////////
+
 // Multiple Posts
 export function postTemplateB(postData) {
+
+   // Checks the local time on the API then makes it more legible on the user end
+   const formattedDate = new Date(postData.updated).toLocaleDateString('en-us', {month:"short", day:"numeric"});
+   const formattedTime = new Date(postData.updated).toLocaleTimeString('en-GB');
+ 
   const post = document.createElement("div");
   post.classList.add("post", "card", "mb-3", "text-bg-dark");
 
@@ -111,7 +123,7 @@ export function postTemplateB(postData) {
   // Adds last updated text with a <small> modifier
   const cardBodySmallText = document.createElement("small");
   cardBodySmallText.classList.add("text-muted");
-  cardBodySmallText.innerText = `Last updated: ${postData.updated}`;
+  cardBodySmallText.innerText = `Last updated:${formattedDate} ${formattedTime}`;
   cardBodyLastUpdated.append(cardBodySmallText);
   return post;
 }
