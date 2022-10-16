@@ -1,5 +1,6 @@
 import { getProfile, updateProfile } from "../api/profile/index.mjs";
 
+// Loads profile info
 import { load } from "../storage/index.mjs";
 
 export async function setUpdateProfileListener() {
@@ -15,6 +16,7 @@ export async function setUpdateProfileListener() {
     form.banner.value = profile.banner;
     form.avatar.value = profile.avatar;
 
+    // Listens for submit, then updates profile
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.target;

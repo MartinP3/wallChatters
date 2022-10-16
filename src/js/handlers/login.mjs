@@ -5,7 +5,7 @@ export function setLoginFormListener()  {
     localStorage.clear();
 
     const form = document.querySelector("#loginForm");
-
+    // if there is a form and a submit happens in it, >login
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();

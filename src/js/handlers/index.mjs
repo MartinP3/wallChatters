@@ -1,3 +1,4 @@
+// barrel file for handlers
 export * from "./createPost.mjs";
 export * from "./login.mjs";
 export * from "./register.mjs";
@@ -7,4 +8,3 @@ export * from "./searchPost.mjs";
 export * from "./posts.mjs";
 export * from "./loadProfile.mjs";
 export * from "./deletePost.mjs";
-export * from "./filterPosts.mjs";

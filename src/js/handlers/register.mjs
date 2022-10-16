@@ -10,14 +10,16 @@ export function setRegisterFormListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
+      // If no banner url, delete it
       if (profile.banner === "") {
         delete profile.banner;
       }
+      // If no avatar url, delete it
       if (profile.avatar === "") {
         delete profile.avatar;
       }
 
-      // Send to API
+      // Send to API upon submit
       register(profile);
     });
   }

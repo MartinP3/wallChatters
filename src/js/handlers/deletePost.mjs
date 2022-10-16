@@ -1,8 +1,10 @@
+// Imports the post and the remove function
 import { getPost, removePost } from "../api/posts/index.mjs";
 
 export async function setDeletePostListener() {
   const form = document.querySelector("#deletePost");
 
+  // searching the url for the post ID
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
 
@@ -18,6 +20,7 @@ export async function setDeletePostListener() {
 
     button.disabled = false;
 
+    // Waits for a "submit" before removing the post
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.target;

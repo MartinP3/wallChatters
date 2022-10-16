@@ -3,6 +3,7 @@ import { getPost, updatePost } from "../api/posts/index.mjs";
 export async function setUpdatePostListener() {
   const form = document.querySelector("#editPost");
 
+  // Checks URL for id to then fetch the right post to update
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
 
@@ -18,6 +19,7 @@ export async function setUpdatePostListener() {
 
     button.disabled = false;
 
+    // Listens for submit to update the post
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.target;
